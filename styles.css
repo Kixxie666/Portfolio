@@ -122,12 +122,13 @@ nav ul li a:hover {
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Floating Labels */
+/* Floating Labels Fix */
 .input-group {
     position: relative;
     margin-bottom: 20px;
 }
 
+/* Input & Textarea */
 .input-group input, 
 .input-group textarea {
     width: 100%;
@@ -145,8 +146,7 @@ nav ul li a:hover {
 .input-group label {
     position: absolute;
     left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 14px;
     font-size: 1rem;
     color: #888;
     transition: all 0.3s ease-in-out;
@@ -161,7 +161,7 @@ nav ul li a:hover {
 .input-group input:not(:placeholder-shown) + label,
 .input-group textarea:not(:placeholder-shown) + label {
     top: -10px;
-    left: 10px;
+    left: 8px;
     font-size: 0.85rem;
     color: #ff9800;
 }
