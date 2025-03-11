@@ -67,5 +67,9 @@ footer {
     color: #fff; 
     text-align: center; 
     padding: 10px 0;
-    margin-top: auto;
-}
+    position: absolute;
+    bottom: 0;
+    width: 644px;
+    height: 20px;
+    margin: 0 auto;
+    }
