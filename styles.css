@@ -1,24 +1,29 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ececec;
-    color: #1b1b1b;
+    background-color: #f4f4f4;
+    color: #222;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Header */
 header {
-    background: #222;
+    background: linear-gradient(45deg, #222, #444);
     color: white;
-    padding: 15px;
+    padding: 15px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background 0.3s ease-in-out;
 }
 
 /* Navigation */
@@ -36,56 +41,111 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Hero Section */
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Hero Section with Typing Effect */
 .hero {
     text-align: center;
-    padding: 50px;
-    background: #3a7bd5;
+    padding: 100px 20px;
+    background: linear-gradient(120deg, #3a7bd5, #3a507d);
     color: white;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+#typing-effect {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9800;
 }
 
 /* Projects Section */
 .projects {
     text-align: center;
-    padding: 50px;
+    padding: 80px 20px;
+    background: #fff;
 }
 
 .project-list {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* ✅ Makes it responsive */
+    flex-wrap: wrap;
 }
 
+/* Interactive Project Cards */
 .project {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    height: 250px;
+    transition: transform 0.6s ease-in-out;
+    position: relative;
+    perspective: 1000px;
 }
 
-/* Hover Effect on Projects */
 .project:hover {
-    transform: scale(1.05);
+    transform: rotateY(10deg) scale(1.05);
 }
 
-/* Contact Section */
+/* Contact Section with Floating Labels */
 .contact {
     text-align: center;
     padding: 50px 0;
-    flex: 1;
+    background: linear-gradient(120deg, #3a7bd5, #3a507d);
+    color: white;
+}
+
+/* Floating Labels for Contact Form */
+.form-control {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+    transform: scale(1.02);
 }
 
 /* Footer */
-footer { 
-    background-color: #111; 
-    color: #fff; 
-    text-align: center; 
-    padding: 10px 0;
-    width: 100%; /* ✅ Fix width issue */
-    margin-top: auto; /* ✅ Push footer to bottom */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
