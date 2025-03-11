@@ -1,34 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav ul li a");
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
     
+    // Smooth scrolling
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
             
-            window.scrollTo({
-                top: targetSection.offsetTop - 60,
-                behavior: "smooth"
-            });
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60,
+                    behavior: "smooth"
+                });
+            }
         });
     });
 
-    // Simple fade-in animation for sections on scroll
-    const sections = document.querySelectorAll("section");
-    
-    function revealSections() {
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (sectionTop < windowHeight - 100) {
-                section.style.opacity = "1";
-                section.style.transform = "translateY(0)";
-            }
-        });
+    // Theme toggle functionality
+    themeToggle.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    });
+
+    // Load saved theme preference
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
     }
-    
-    window.addEventListener("scroll", revealSections);
-    revealSections(); // Initial check
 });
