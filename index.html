@@ -4,43 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="bg-dark text-white py-3 text-center">
-        <div class="container">
-            <h1 class="h4">Ryan</h1>
-        </div>
+    <header>
+        <nav>
+            <h1>Ryan Taylor</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="bg-dark">
-        <div class="container">
-            <ul class="nav justify-content-center py-2">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <section class="hero">
+        <h2>Hi, I'm Ryan!</h2>
+        <p>| Computing Student | Developer | Tech Enthusiast | </p>
+    </section>
 
-    <main class="container my-5">
-        <div class="text-center mb-4">
-            <h2 class="fw-bold">Welcome to My Portfolio</h2>
-            <p class="text-muted">Explore my work and projects.</p>
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Fake News Detection System</h3>
+                <p>A Django-based web app that verifies the authenticity of news articles.</p>
+                <a href="https://github.com/Kixxie666/FactGuard" target="_blank">GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Django IoT Application</h3>
+                <p>A Django application built for Tech reports</p>
+                <a href="https://github.com/Kixxie666/Django-app" target="_blank">GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Coming Soon...</h3>
+                <p>A placeholder for an upcoming project.</p>
+                <a href="#">GitHub</a>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p class="mb-2">© 2025 Ryan. All Rights Reserved.</p>
-        <div>
-            <a href="https://github.com/Kixxie666" target="_blank">
-                <img src="images/github-icon.png" alt="GitHub" width="40" height="40" class="mx-2">
-            </a>
-            <a href="https://www.youtube.com/@Ryan-cz5pj" target="_blank">
-                <img src="images/youtube-icon.png" alt="YouTube" width="40" height="40" class="mx-2">
-            </a>
-        </div>
+    <footer>
+        <p>© 2025 Ryan. All Rights Reserved.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
