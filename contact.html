@@ -19,8 +19,19 @@
 
     <section class="contact">
         <h2>Contact Me</h2>
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: <a href="https://github.com/Kixxie666" target="_blank">GitHub Profile</a></p>
+        <p>Have a question or a project idea? Fill out the form below, and I'll get back to you!</p>
+        <form action="mailto:rgt2017@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <footer>
