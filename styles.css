@@ -131,7 +131,7 @@ nav ul li a:hover {
 /* Input & Textarea */
 .input-group input, 
 .input-group textarea {
-    width: 100%;
+    width: calc(100% - 24px); 
     padding: 12px;
     font-size: 1rem;
     border: 2px solid #ff9800;
@@ -140,6 +140,7 @@ nav ul li a:hover {
     transition: all 0.3s ease-in-out;
     background: white;
     color: black;
+    box-sizing: border-box;
 }
 
 /* Floating Labels */
