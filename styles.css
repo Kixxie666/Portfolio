@@ -130,7 +130,7 @@ nav ul li a:hover {
 
 /* Input & Textarea */
 .input-group input {
-    width: calc(90% - 24px); 
+    width: calc(97% - 24px); 
     padding: 12px;
     font-size: 1rem;
     border: 2px solid #ff9800;
